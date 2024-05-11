@@ -5,4 +5,4 @@
 <hr>
 
 # Screenshot from my Website:
-![Screenshot from my Website](./archives/images/readme/Capture-home.PNG)
+![Screenshot from my Website](./archives/images/readme/landing-page-screenshot.jpeg)
