@@ -6,10 +6,11 @@
     <title>marsudev.com</title>
     <link rel="shortcut icon" href="./archives/images/icon.ico">
     <link rel="stylesheet" href="./archives/css/style.css">
+    <script src="./archives/js/script.js"></script>
 </head>
 <body>
    <header>
-    <div class="container" id="header">
+    <div id="header">
         <div class="top">
             <ul class="social">
                 <li><a href="https://linkedin.com/in/kevynmarsu" target="_blank"><i class="fab fa-linkedin"></i></a></li>
@@ -17,19 +18,19 @@
                 <li><a href="https://instagram.com/marsudev_" target="_blank"><i class="fab fa-instagram"></i></a></li>
             </ul>
             <div class="mobile">
-                <h3>Marsu</h3>
-                <h3 id="dev">Dev</h3>
-                <button onclick="anima()" id="btn-menu">
+                <button onclick="animar()" id="btn-menu">
                     <span class="linha"></span>
                     <span class="linha"></span>
                     <span class="linha"></span>
                 </button>
+                <h3>Marsu</h3>
+                <h3 id="dev">Dev</h3>
                 <div id="menu-mobile">
                     <nav>
                         <a href="#">Início</a>
-                        <a href="#">Sobre Mim</a>
-                        <a href="#">Portfólio</a>
-                        <a href="#">Contato</a>
+                        <a href="#aboutme">Sobre Mim</a>
+                        <a href="#portfolio">Portfólio</a>
+                        <a href="#contactme">Contato</a>
                     </nav>
                 </div>
             </div>
@@ -37,28 +38,141 @@
         <div class="menu">
             <nav>
                 <li><a href="#">Início</a></li>
-                <li><a href="#">Sobre Mim</a></li>
-                <div class="branding"></div>
-                <li><a href="#">Portfólio</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="#aboutme">Sobre Mim</a></li>
+                <div class="branding1"></div>
+                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#contactme">Contato</a></li>
             </nav>
         </div>
     </div>
     <div class="bar"></div>
    </header>
    <main>
-    <div class="container" id="aboutme">
-        <div id="cjob">
+    <div id="aboutme">
+        <div class="abt-sk">
+            <div id="cjob">
             <h3>Ocupação Profissional</h3>
             <p>Freelancer Full Stack</p>
-        </div>
-        <div id="quote">
-            <blockquote>“Chegará um ponto em que nenhum emprego será necessário – você pode ter um emprego se quiser para satisfação pessoal, mas a IA será capaz de fazer tudo.”
-                ~Elon Musk
-            </blockquote>
+            </div>
+            <div class="branding"></div>
+            <div id="prest">
+                <h3>Hello,</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, reiciendis non! Doloribus perspiciatis eos iusto, vel modi tenetur harum alias laboriosam sint aut voluptatibus ad quidem repudiandae fugit. Quod, vitae?</p>
+            </div>
         </div>
     </div>
+    <div id="skills">
+        <h3>Skills</h3>
+        <div class="carousel">
+            <div class="slide">
+                <figure>
+                    <img src="./archives/images/git.png">
+                </figure>
+                <figure>
+                    <img src="./archives/images/mysql.png">
+                </figure>
+                <figure>
+                    <img src="./archives/images/php.png">
+                </figure>
+                <figure>
+                    <img src="./archives/images/html-5.png">
+                </figure>
+                <figure>
+                    <img src="./archives/images/css-3.png">
+                </figure>
+                <figure>
+                    <img src="./archives/images/js.png">
+                </figure>
+                <figure>
+                    <img src="./archives/images/vuejs.png">
+                </figure>
+                <figure>
+                    <img src="./archives/images/python.png">
+                </figure>
+                <figure>
+                    <img src="./archives/images/java.png">
+                </figure>
+                <figure>
+                    <img src="./archives/images/springboot.png">
+                </figure>
+            </div>
+        </div>
+    </div>
+    <div id="portfolio">
+        <h3>Portfólio</h3>
+        <div class="container-pf">
+            <div class="topic">
+                <img src="./archives/images/coding.png">
+                <h4>Code 1</h4>
+                <p>lorem ipsum dolor sit</p>
+                <a href="#code1">Read More</a>
+            </div>
+            <div class="topic">
+                <img src="./archives/images/coding.png">
+                <h4>Code 2</h4>
+                <p>lorem ipsum dolor sit</p>
+                <a href="#code1">Read More</a>
+            </div>
+            <div class="topic">
+                <img src="./archives/images/coding.png">
+                <h4>Code 3</h4>
+                <p>lorem ipsum dolor sit</p>
+                <a href="#code1">Read More</a>
+            </div>
+            <div class="topic">
+                <img src="./archives/images/coding.png">
+                <h4>Code 4</h4>
+                <p>lorem ipsum dolor sit</p>
+                <a href="#code1">Read More</a>
+            </div>
+            <div class="topic">
+                <img src="./archives/images/coding.png">
+                <h4>Code 5</h4>
+                <p>lorem ipsum dolor sit</p>
+                <a href="#code1">Read More</a>
+            </div>
+        </div>
+    </div>
+    <div id="contactme">
+        <h3>Entre em Contato</h3>
+        <p>Quer fazer um orçamento? Envie-me um e-mail</p>
+        <form action="send_me.php">
+            <label for="name">Nome</label><br>
+            <input type="text" name="name" id="name" required><br>
+            <label for="email">E-mail</label><br>
+            <input type="email" name="email" id="email" required><br>
+            <label for="assunto">Assunto</label><br>
+            <input type="text" name="assunto" id="assunto" required><br>
+            <label for="mensagem">Mensagem</label><br>
+            <textarea name="mensagem" id="mensagem" required></textarea><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
    </main>
+   <footer>
+    <div id="container-footer">
+        <div id="menu-foot">
+            <h4>Menu</h4>
+            <nav id="footer-menu">
+                <a href="#">Início</a>
+                <a href="#aboutme">Sobre Mim</a>
+                <a href="#portfolio">Portfólio</a>
+                <a href="#contactme">Contato</a>
+            </nav>
+        </div>
+        <div>
+            <h4>Redes Sociais</h4>
+            <nav id="social">
+                <a href="https://linkedin.com/in/kevynmarsu" target="_blank">LinkedIn</a>
+                <a href="https://github.com/dev-marsu" target="_blank">Github</a>
+                <a href="https://instagram.com/marsudev_" target="_blank">Instagram</a>
+            </nav>
+        </div>
+    </div>
+    <p>
+        2024 Marsu Dev &copy; Todos os Direitos Reservados 
+    </p>
+   </footer>
 
     <script src="https://kit.fontawesome.com/1441b6cec8.js" crossorigin="anonymous"></script>
 </body>

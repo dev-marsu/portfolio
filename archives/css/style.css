@@ -44,7 +44,7 @@ header {
 }
 
 .social li a {
-    color: #dedeeb;
+    color: #d0642c;
     background-color: #1b0717;
     padding: 9px 10px;
     border-radius: 100%;
@@ -59,7 +59,7 @@ header {
 .mobile {
     background-color: #1b0717;
     height: 50px;
-    display: flex;
+    display: none;
 }
 
 .mobile h3 {
@@ -80,40 +80,446 @@ header {
 
 
 #btn-menu {
-    justify-content: right;
-    padding-top: 15px;
+    padding: 15px;
     width: 30px;
     height: 30px;
     border: 0;
     border-radius: 2px;
     background: transparent;
     cursor: pointer;
+    display: none;
 }
 
-#btn-menu.ativa .linha:nth-child(1) {
-    transform: translateY(2px) rotate(-45deg);
-    background-color: #f00;
-    width: 10px;
-}
-
-#btn-menu.ativa .linha:nth-child(2) {
-    width: 0;
-}
-
-#btn-menu.ativa .linha:nth-child(3) {
-    transform: translateY(-2px) rotate(+45deg);
-    background-color: #f00;
-    width: 10px;
-    padding-bottom: 1px;
+#btn-menu.ativo .linha {
+    background-color: #a1a5be;
 }
 
 .linha {
     width: 15px;
     height: 2px;
-    background-color: #6e677d;
+    background-color: #cb4b3f;
     display: block;
     margin: 3px auto;
-    position: relative;
     transform-origin: center;
     transition: 0.2s;
+}
+
+#menu-mobile {
+    background-color: #1b0717da;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#menu-mobile nav a {
+    color: #dedeeb;
+    text-decoration: none;
+    padding: 20px 30px;
+    font-size: 16pt;
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    transition: 0.2s;
+}
+
+#menu-mobile nav a:hover {
+    background-color: #20111d;
+}
+
+.menu nav {
+    padding-top: 140px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu nav li {
+    list-style-type: none;
+    padding: 10px;
+}
+
+.menu nav li a {
+    color:#d0642c;
+    background-color: #1b0717;
+    border-radius: 20px;
+    font-size: 16pt;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: 600;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu nav li a:hover {
+    color: #491321;
+    background-color: #eab690;
+}
+
+.menu .branding1 {
+    background-image: url(/archives/images/branding1.png);
+    background-size: cover;
+    height: 120px;
+    width: 120px;
+    transform: translateY(-40%);
+    margin: 0 10px;
+}
+
+.bar {
+    background-image: url(/archives/images/bar.png);
+    background-size: contain;
+    height: 25px;
+    transform: translateY(-100%);
+}
+
+#aboutme {
+    background-color: #1b0717;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.abt-sk {
+    display: flex;
+}
+
+.abt-sk #cjob {
+    padding-right: 150px;
+}
+
+.abt-sk #prest {
+    padding-left: 150px;
+}
+
+#aboutme #cjob h3,
+#aboutme #prest h3 {
+    color: #d0642c;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18pt;
+    padding-bottom: 20px;
+}
+
+#aboutme #cjob p,
+#aboutme #prest p {
+    color: #dedeeb;
+    font-family: Arial;
+    font-weight: 500;
+    font-size: 10pt;
+}
+
+#aboutme .branding {
+    background-image: url(/archives/images/branding.png);
+    background-size: cover;
+    height: 250px;
+    width: 250px;
+    border: 1px #a1a5be dashed;
+    border-radius: 100%;
+    transform: translateX(+1%);
+}
+
+#aboutme #prest p {
+    max-width: 300px;
+}
+
+#skills {
+    background-color: #dedeeb;
+}
+
+#skills h3 {
+    color: #d0642c;
+    background-color: #1b0717;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22pt;
+    padding: 20px 0 50px 0;
+    text-align: center;
+}
+
+#skills .carousel .slide {
+    display: flex;
+    justify-content: center;
+}
+
+#skills .carousel .slide figure {
+    padding: 0 20px;
+    transform: translateY(-40%);
+}
+
+#skills .carousel .slide figure img {
+    height: 90px;
+    cursor: pointer;
+}
+
+#portfolio {
+    background-color: #dedeeb;
+    padding-bottom: 40px;
+}
+
+#portfolio h3 {
+    color: #d0642c;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22pt;
+    padding: 20px 0 40px 0;
+    text-align: center;
+}
+
+#portfolio .container-pf {
+    display: flex;
+    justify-content: center;
+}
+
+#portfolio .container-pf .topic {
+    border: 1px #491321 solid;
+    border-radius: 10px;
+    background-color: #fff;
+    max-width: max-content;
+    margin: 10px;
+}
+
+#portfolio .container-pf .topic img {
+    height: 100px;
+    padding: 2px;
+    border-radius: 10px 10px 5px 5px;
+}
+
+#portfolio .container-pf .topic h4,
+.topic p,
+.topic a {
+    font-family: 'Roboto', sans-serif;
+    padding-left: 10px;
+}
+
+.topic p {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#portfolio .container-pf .topic a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#contactme {
+    background-color: #1b0717;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contactme h3 {
+    color: #d0642c;
+    font-family: 'Poppins', sans-serif;
+    font-size: 22pt;
+    padding: 20px 0 40px 0;
+    text-align: center;    
+}
+
+#contactme p {
+    color: #dedeeb;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14pt;
+    text-align: center;
+    padding: 5px 0 20px 0;
+}
+
+#contactme form label {
+    color: #d0642c;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16pt;
+    padding: 20px 0 40px 10px;
+    text-align: center;
+}
+
+#contactme form input,
+form textarea,
+#contactme form button {
+    color: #dedeeb;
+    background-color: #20111d;
+    border: 1px #f3a867 solid;
+    border-radius: 40px;
+    padding: 10px;
+    margin: 20px 0;
+    width: 400px;
+    height: 50px;
+    outline: none;
+}
+
+#contactme form input:focus,
+form textarea:focus {
+    background-color: #491321;
+}
+
+#contactme form input {
+    padding-left: 20px;
+}
+
+#contactme form textarea {
+    resize: none;
+    height: 200px;
+    width: 400px;
+    padding-left: 20px;
+    border-radius: 30px;
+}
+
+#contactme form button {
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contactme form button:hover {
+    border: #491321;
+    background-color: #491321;
+}
+
+footer {
+    background-color: #dedeeb;
+}
+
+footer #container-footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+#container-footer #footer-menu,
+#social {
+    display: flex;
+    flex-direction: column;
+}
+
+#container-footer nav a {
+    color: #76382b;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    padding: 2px 0;
+    font-weight: 500;
+    text-decoration: none;
+    justify-content: center;
+    text-align: left;
+    align-items: center;
+}
+
+#container-footer nav a:hover {
+    color: #cb4b3f;
+}
+
+#container-footer h4 {
+    color: #d0642c;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14pt;
+    text-align: center;    
+}
+
+#container-footer #menu-foot {
+    padding-right: 500px;
+}
+
+footer p {
+    color: #3d3d3d;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px 30px;
+}
+
+@media only screen and (max-width: 590px) {
+
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    header {
+        height: 50vh;
+    }
+
+    #menu-mobile.abrir {
+        visibility: visible;
+        height: 100%;
+    }
+
+    #btn-menu {
+        display: block;
+        justify-content: right;
+        align-items: flex-end;
+        text-align: right;
+    }
+
+    .social,
+    .menu {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+    }
+
+    .brand {
+        background-image: url(/archives/images/branding1.png);
+        background-size: cover;
+        justify-content: center;
+        margin-top: 90px;
+        height: 150px;
+        width: 150px;
+    }
+
+    .txt h2 {
+        color: #491321;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 40px;
+        font-weight: 800;
+        padding-top: 5px;
+        text-align: center;
+        transform: translateX(-10%);
+    }
+
+    .bar {
+        display: none;
+    }
+
+    #aboutme {
+        background-color: #1b0717;
+        padding: 20px 0;
+    }
+
+    .abt-sk {
+        display: block;
+    }
+    
+    #aboutme #cjob,
+    #aboutme #prest {
+        justify-content: center;
+        text-align: center;
+        padding: 0;
+    }
+
+    #skills .carousel .slide figure img {
+        display: none;
+        height: 90px;
+        cursor: pointer;
+    }
+
+    #aboutme .branding {
+        background-image: url(/archives/images/branding.png);
+        background-size: cover;
+        margin: 50px 0;
+        height: 250px;
+        width: 250px;
+        border: 1px #a1a5be dashed;
+        border-radius: 100%;
+    }
+
+    #aboutme #cjob p,
+    #aboutme #prest p {
+        text-align: center;
+    }
+    
+    #portfolio {
+        display: none;
+    }
 }

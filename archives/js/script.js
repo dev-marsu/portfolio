@@ -1,4 +1,9 @@
-function anima() {
+function animar() {
+    const MenuMb = document.getElementById('menu-mobile')
     const btn = document.getElementById('btn-menu')
-    btn.classList.toggle('ativa')
+
+    MenuMb.addEventListener('click', animar)
+    
+    MenuMb.classList.toggle('abrir')
+    btn.classList.toggle('ativo')
 }
