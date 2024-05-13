@@ -6,6 +6,6 @@
 
 * Mobile:
 
-!(/images/readme/lp-mobile-scr.jpeg)
+!(./images/readme/lp-mobile-scr.jpeg)
 
 * Desktop:
