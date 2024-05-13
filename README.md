@@ -55,4 +55,4 @@
 
 ![Rodapé Screenshot](./images/readme/footer-scr.jpeg)
 
-* Rodapé do site.
+* Rodapé do site.*
