@@ -6,6 +6,6 @@
 
 * Mobile:
 
-!(./images/readme/lp-mobile-scr.jpeg)
+![Landing Page v. Mobile Screenshot](./images/readme/lp-mobile-scr.jpeg)
 
 * Desktop:
