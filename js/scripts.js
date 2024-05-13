@@ -7,3 +7,9 @@ function animar() {
     MenuMb.classList.toggle('abrir')
     btn.classList.toggle('ativar')
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(function() {
+      document.getElementById('loading-screen').style.display = 'none';
+    }, 500);
+  });
