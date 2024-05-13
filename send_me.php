@@ -6,7 +6,7 @@
     $to = "kevynhdasilva@proton.me";
     $assunto = addslashes($_POST['assunto']);
 
-    $corpo = "Nome: ".$nome."\n"."E-mail: ".$email.;
+    $corpo = "Nome: ".$nome."\n"."E-mail: ".$email;
 
     $cabeca = "From hsskevyn@gmail.com"."\n"."Reply-to: ".$email."\n"."X=Mailer:PHP/".phpversion();
 
