@@ -179,7 +179,7 @@ header #mobile {
 }
 
 #aboutme .branding {
-    background-image: url(./images/branding.png);
+    background-image: url(/images/branding.png);
     background-size: cover;
     border: 1px #6e677d dashed;
     border-radius: 100%;
@@ -439,7 +439,7 @@ footer p {
     }
 
     header {
-        background-image: url(./images/background.jpg);
+        background-image: url(/images/background.jpg);
         background-size: cover;
         height: 350px;
     }
@@ -481,7 +481,7 @@ footer p {
     }
 
     #menu-desktop .branding1 {
-        background-image: url(./images/branding1.png);
+        background-image: url(/images/branding1.png);
         background-size: cover;
         height: 120px;
         width: 120px;
