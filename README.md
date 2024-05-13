@@ -4,4 +4,4 @@
 
 
 # Screenshot from my Website:
-![Screenshot from my Website](./archives/images/readme/landing-page-screenshot.jpeg)
+![Screenshot from my Website](./archives/images/readme/lp-screenshot.jpeg)
