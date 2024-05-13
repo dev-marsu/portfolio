@@ -420,6 +420,10 @@ footer #container-footer {
     padding-right: 500px;
 }
 
+#container-footer #menu-foot h4 {
+    padding-right: 50px;
+}
+
 footer p {
     color: #3d3d3d;
     font-family: 'Roboto', sans-serif;
