@@ -3,7 +3,7 @@ function animar() {
     const btn = document.getElementById('btn-menu')
 
     MenuMb.addEventListener('click', animar)
-    
+
     MenuMb.classList.toggle('abrir')
-    btn.classList.toggle('ativo')
+    btn.classList.toggle('ativar')
 }

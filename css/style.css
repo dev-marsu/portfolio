@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+css palette {
+    main-palette {
+        color: #eab690;
+    }
+    palette {
+        color: #6e677d, #f3a867, #1b0717, #dedeeb, #491321
+               #a1a5be, #76382b, #887eaa, #cb4b3f, #d0642c;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#top,
+#menu-desktop {
+    display: none;
+}
+
+header #mobile {
+    background-color: #1b0717;
+    height: 50px;
+}
+
+#mobile {
+    display: flex;
+}
+
+#mobile h3 {
+    color: #d0642c;
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-top: 13px;
+    padding-right: 3px;
+}
+
+#mobile #dev {
+    color: #f3a867;
+    padding-top: 11px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#btn-menu {
+    width: 50px;
+    height: 50px;
+    background-color: #1b0717;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#btn-menu .linha {
+    width: 20px;
+    height: 2px;
+    background-color: #ccc;
+    margin: 5px auto;
+    position: relative;
+    display: block;
+    transform-origin: center;
+    transition: 0.2s;
+}
+
+#btn-menu.ativar .linha {
+    margin-bottom: 5px;
+}
+
+#btn-menu.ativar .linha:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+    background-color: #f00;
+}
+
+#btn-menu.ativar .linha:nth-child(2) {
+    width: 0;
+}
+
+#btn-menu.ativar .linha:nth-child(3) {
+    transform: translateY(-3px) rotate(+45deg);
+    background-color: #f00;
+}
+
+#menu-mobile {
+    background-color: #1b0717be;
+    backdrop-filter: blur(15px);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#menu-mobile.abrir {
+    visibility: visible;
+    height: calc(100vh - 50px);
+}
+
+#menu-mobile nav a {
+    color: #dedeeb;
+    text-decoration: none;
+    display: block;
+    padding: 20px 30px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16pt;
+    transition: 0.2s;
+}
+
+#menu-mobile nav a:hover {
+    background-color: #1b0717d8;
+}
+
+#aboutme {
+    background-color: #491321;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#aboutme h3 {
+    color: #cb4b3f;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 10px;
+
+}
+
+#aboutme p {
+    color: #f3a867;
+    font-family: 'Roboto Mono', sans-serif;
+}
+
+#aboutme #cjob p {
+    text-align: center;
+}
+
+#aboutme .branding {
+    background-image: url(/images/branding.png);
+    background-size: cover;
+    border: 1px #6e677d dashed;
+    border-radius: 100%;
+    margin: 20px 0;
+    height: 200px;
+    width: 200px;
+}
+
+#aboutme #presentation {
+    text-align: center;
+}
+
+#aboutme #presentation p {
+    text-align: justify;
+    max-width: 250px;
+    padding-bottom: 20px;
+}
+
+#skills h3 {
+    color: #cb4b3f;
+    background-color: #491321;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 10px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#skills p {
+    color: #f3a867;
+    background-color: #491321;
+    font-family: 'Roboto Mono', sans-serif;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+#skills .carousel,
+#skills .carousel p {
+    color: #000;
+    background-color: #dedeeb;
+}
+
+#skills .carousel .slide {
+    text-align: center;
+}
+
+.btn-carousel {
+    display: none;
+}
+
+#skills .carousel .slide figure {
+    display: inline-block;
+    padding: 10px;
+}
+
+figure figcaption {
+    color: #76382b;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+#skills .carousel .slide figure img {
+    height: 90px;
+}
+
+#portfolio {
+    background-color: #491321;
+}
+
+#portfolio h3 {
+    color: #cb4b3f;
+    background-color: #491321;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 10px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#portfolio p {
+    color: #f3a867;
+    background-color: #491321;
+    font-family: 'Roboto Mono', sans-serif;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+#portfolio .carousel {
+    justify-content: center;
+    text-align: center;
+}
+
+#portfolio .carousel h4 {
+    color: #d0642c;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#portfolio .carousel p {
+    color: #a1a5be;
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 10px;
+}
+
+#portfolio .carousel a {
+    color: #dedeeb;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+#portfolio .carousel .topic {
+    padding-bottom: 20px;
+}
+
+#portfolio .carousel .topic img {
+    height: 150px;
+    border-radius: 10px;
+}
+
+#contactme {
+    background-color: #1b0717;
+    padding: 10px;
+}
+
+#contactme h3 {
+    color: #cb4b3f;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 10px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+#contactme p {
+    color: #f3a867;
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+#contactme form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contactme form label {
+    color: #f3a867;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    padding-left: 10px;
+    text-align: left;
+}
+
+form input,
+textarea {
+    color: #dedeeb;
+    background-color: #1b0717;
+    border: 1px #d0642c solid;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    outline: unset;
+}
+
+form textarea {
+    cursor: pointer;
+    resize: none;
+    height: 200px;
+}
+
+form input:focus,
+form textarea:focus,
+form button {
+    color: #dedeeb;
+    background-color: #491321;
+    font-family: Arial, sans-serif;
+}
+
+form button {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #d0642c;
+    border: 1px #d0642c solid;
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+}
+
+form button:hover {
+    background-color: #491321;
+}
+
+footer {
+    background-color: #dedeeb;
+}
+
+footer p {
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+#ct-footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+#ct-footer h3 {
+    color: #cb4b3f;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+#ct-footer a {
+    color: #1b0717;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    padding: 2px 0;
+    text-decoration: none;
+}
+
+#ct-footer nav {
+    display: flex;
+    flex-direction: column;
+}
+
+#ct-footer #menu-footer {
+    padding-right: 180px;
+}
+
+#ct-footer #social-footer {
+    text-align: right;
+}
+
+#ct-footer nav a {
+    text-decoration: none;
+}
