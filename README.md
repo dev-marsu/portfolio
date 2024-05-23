@@ -11,8 +11,8 @@
 
 ## *Mobile
 
- <img src="./images/readme/mobile-version.jpeg" alt="Screenshot da versão Mobile" width="200px">
+ <img src="./images/readme/mobile-version.jpeg" alt="Screenshot da versão Mobile" width="400px">
 
 ## *Desktop
 
- <img src="./images/readme/desktop-version.jpeg" alt="Screenshot da versão Desktop" width="200px">
+ <img src="./images/readme/desktop-version.jpeg" alt="Screenshot da versão Desktop">
