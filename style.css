@@ -249,7 +249,8 @@ main #aboutme .branding {
     height: 240px;
     width: 240px;
     margin: 0 100px;
-    transform: translateY(-30px) translateX(+20px);
+    margin-bottom: 20px;
+    transform: translateX(+20px);
 }
 
 main #aboutme .hello h2 {
