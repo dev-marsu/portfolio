@@ -1,6 +1,6 @@
 window.addEventListener('load', function() {
      document.getElementById('loading').style.display = 'none';
-});
+})
 
 function animarMenu() {
     const MenuDiv = document.getElementById('menu-mobile')
