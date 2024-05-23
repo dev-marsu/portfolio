@@ -498,7 +498,7 @@ main #contactme #contato textarea {
     transition: 0.3s;
 }
 
-#contactme #contato input[type="button"]:hover {
+#contactme #contato button:hover {
     color: #1c1b1b;
     background-color: #f29f05;
 }
