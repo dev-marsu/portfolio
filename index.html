@@ -26,15 +26,15 @@
             </div>
         </div>
         <div class="header-mobile">
-            <img src="images/branding.png" alt="Dev Marsu">
+            <button onclick="animarMenu()" id="btn-menu">
+                <div class="linha"></div>
+                <div class="linha"></div>
+                <div class="linha"></div>
+            </button>
             <h3>Dev</h3>
-            <h3>Marsu</h3>
-            <div class="hamburguer-menu">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </div>
-            <div id="menu">
+            <img src="images/branding.png" alt="Dev Marsu">
+            <h3 id="marsu">Marsu</h3>
+            <div id="menu-mobile">
                 <nav>
                     <li><a href="#">Home</a></li>
                     <li><a href="#aboutme">Sobre</a></li>
@@ -46,15 +46,17 @@
     </header>
     <main>
         <div id="btn-home"></div>
-        <div id="aboutme">
-            <div class="job">
-                <h2>Ocupação Profissional</h2>
-                <p>Full Stack Freelancer</p>
-            </div>
-            <div class="branding"></div>
-            <div class="hello">
-                <h2>Olá,</h2>
-                <p>Me chamo Kevyn e sou apaixonado por tecnologia há 12 anos. Meu primeiro contato com programação foi aos 8 anos quando criei o meu primeiro mod para Minecraft. O primeiro site que construí foi aos 12 anos, utilizando HTML e CSS no Blogger do Google, fazendo um site para a lojinha de artesanato da minha mãe.</p>
+        <div class="screen">
+            <div id="aboutme">
+                <div class="job">
+                    <h2>Ocupação Profissional</h2>
+                    <p>Full Stack Freelancer</p>
+                </div>
+                <div class="branding"></div>
+                <div class="hello">
+                    <h2>Olá,</h2>
+                    <p>Me chamo Kevyn e sou apaixonado por tecnologia há 12 anos. Meu primeiro contato com programação foi aos 8 anos quando criei o meu primeiro mod para Minecraft. O primeiro site que construí foi aos 12 anos, utilizando HTML e CSS no Blogger do Google, fazendo um site para a lojinha de artesanato da minha mãe.</p>
+                </div>
             </div>
         </div>
         <div id="skills">
@@ -142,7 +144,7 @@
         <div id="contactme">
             <h2>Fale Comigo</h2>
             <p>Gostaria de fazer um orçamento? Me mande um E-mail! </p>
-            <form id="contato">
+            <form action="send_me.php" id="contato">
                 <label for="name">Nome</label><br>
                 <input type="text" name="name" placeholder="João da Silva" spellcheck="false" required><br>
                 <label for="email">E-mail</label><br>
@@ -151,7 +153,7 @@
                 <input type="text" name="assunto" placeholder="Gostaria de fazer um orçamento" spellcheck="false" required><br>
                 <label for="mensagem">Mensagem</label><br>
                 <textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem..." spellcheck="false" required></textarea><br>
-                <input type="button" value="Enviar">
+                <button type="submit">Enviar</button>
             </form>
         </div>
     </main>
@@ -175,7 +177,7 @@
                 </nav>
             </section>
         </div>
-        <p>2024 &copy; Dev Marsu</p>
+        <p>2024 Dev Marsu &copy; All Rights Reserved</p>
     </footer>
 
     <script src="js/scripts.js"></script>

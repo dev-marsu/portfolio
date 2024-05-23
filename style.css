@@ -13,108 +13,218 @@ is palette {
 
 body {
     background-color: #267365;
-    max-height: calc(100% - 300px);
+}
+
+/* Header Mobile */
+
+header .header-mobile {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #1b554a;
+    height: 50px;
+}
+
+.header-mobile #btn-menu {
+    transform: translateX(-100px);
+}
+
+.header-mobile h3,
+.header-mobile img {
+    transform: translateX(-15px);
+}
+
+.header-mobile h3 {
+    color: #eba82c;
+    font-family: 'Poppins', sans-serif;
+    margin: auto 0;
+}
+
+.header-mobile img {
+    height: 50px;
+    padding: 5px;
+}
+
+.header-mobile #menu-mobile {
+    visibility: hidden;
+    background-color: #1b554a8c;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    z-index: 1;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.header-mobile #menu-mobile.abrir {
+    visibility: visible;
+    height: calc(100vh - 50px);
+}
+
+.header-mobile #menu-mobile nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-mobile #menu-mobile nav li {
+    display: block;
+    text-align: left;
+    list-style: none;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.header-mobile #menu-mobile nav li a {
+    color: #f2f2f2;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 14pt;
+    text-decoration: none;
+}
+
+.header-mobile #menu-mobile nav li:hover {
+    background-color: #1b554a8c;
+}
+
+#btn-menu {
+    background: transparent;
+    height: 50px;
+    width: 50px;
+    border: none;
+    /* border: 1px #fff solid; */
+}
+
+.linha {
+    height: 2px;
+    width: 20px;
+    background-color: #ccc;
+    margin: 5px auto;
+    transition: 0.2s;
+    z-index: 1;
+}
+
+#btn-menu.ativar .linha:nth-child(1) {
+    transform: translateY(5px) rotate(-45deg);
+    background-color: #e02828;
+}
+
+#btn-menu.ativar .linha:nth-child(3) {
+    transform: translateY(-8px) rotate(45deg);
+    background-color: #e02828;
+}
+
+#btn-menu.ativar .linha:nth-child(2) {
+    width: 0;
 }
 
 /* Header Desktop */
 
-.header-mobile {
+.header-mobile,
+.header-mobile #menu-mobile,
+.header-mobile button,
+.header-mobile h3,
+.header-mobile img {
     display: none;
 }
 
 header {
     background-image: url(images/background.jpg);
     background-size: cover;
-    height: calc(100vh + 230px);
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
 .header-desktop {
-    background-image: linear-gradient(#000, #267365ad);
-    height: calc(100vh - 100px);
+    background-image: linear-gradient(#000, #267365b7);
+    background-size: cover;
+    height: 100vh;
 }
 
 .header-desktop #social {
     display: flex;
     padding-left: 30px;
-    padding-top: 15px;
 }
 
 .header-desktop #social li {
     display: inline-block;
     list-style: none;
-    padding: 10px;
+    padding-top: 30px;
+    padding-left: 10px;
 }
 
 .header-desktop #social li a {
     color: #f2f2f2;
     background-color: #267365;
+    padding: 7px 10px;
     border-radius: 50%;
-    padding: 6px 9px;
-    transition: 0.3s;
+    transition: all 0.5s;
 }
 
 .header-desktop #social li a:hover {
     color: #000;
-    background-color: #fff;
+    background-color: #f2f2f2;
 }
 
-.header-desktop #menu {
-    margin-top: 200px;
-}
+/* Menu Desktop */
 
 .header-desktop #menu nav {
     display: flex;
     justify-content: center;
+    padding-top: 180px;
 }
 
 .header-desktop #menu nav li {
     display: inline-block;
     list-style: none;
+    padding: 15px;
+}
+
+.header-desktop #menu nav li a {
+    font-family: 'Radio Canada Big', sans-serif;
+    font-size: 13pt;
+    color: #f2f2f2;
+    background-color: #267365;
     padding: 10px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.header-desktop #menu nav li a:hover {
+    font-size: 14pt;
+    color: #ccc;
+    background-color: #1b554a;
 }
 
 .header-desktop #menu .branding1 {
     background-image: url(images/branding1.png);
     background-size: cover;
-    height: 120px;
-    width: 120px;
-    transform: translateY(-45px);
-    margin: 0 15px;
-    cursor: pointer;
+    height: 140px;
+    width: 140px;
+    margin: 0 20px;
+    transform: translateY(-50px);
     transition: 0.5s;
 }
 
 .header-desktop #menu .branding1:hover {
-    height: 109px;
-    width: 109px;
+    height: 135px;
+    width: 135px;
 }
 
-.header-desktop #menu nav li a {
-    color: #f2f2f2;
-    font-size: 13pt;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    background-color: #1f5e52;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 20px;
-    transition: 0.5s;
+main .screen {
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
 }
-
-.header-desktop #menu nav li a:hover {
-    color: #f2f2f2;
-    font-size: 14pt;
-    background-color: #267365;
-}
-
-/*  aboutme  */
 
 main #aboutme {
     display: flex;
-    transform: translateY(-330px);
+    background-color: #267365b7;
     justify-content: center;
-    padding: 30px;
-    background-color: #267365ad;
+    /* padding-bottom: 50px; */
 }
 
 main #aboutme h2 {
@@ -127,23 +237,18 @@ main #aboutme p {
     color: #ddd;
 }
 
-main #aboutme .job {
-    transform: translateX(+25px);
-}
-
 main #aboutme .job h2 {
     color: #f2f2f2;
 }
 
-.branding {
-    background-color: #f2cb05;
+main #aboutme .branding {
     background-image: url(images/branding.png);
     background-size: cover;
-    border: 5px #e02828 dashed;
-    border-radius: 100%;
-    height: 300px;
-    width: 300px;
-    margin: 0 80px;
+    border: 5px #f23030 dashed;
+    border-radius: 50%;
+    height: 240px;
+    width: 240px;
+    margin: 0 100px;
     transform: translateY(-30px) translateX(+20px);
 }
 
@@ -156,13 +261,13 @@ main #aboutme .hello p {
 }
 
 main #skills {
-    transform: translateY(-330px);
+    padding-top: 30px;
 }
 
 main #skills h2,
 main #skills p {
     text-align: center;
-    transform: translateX(-20px);
+    transform: translateX(-30px);
 }
 
 main #skills h2,
@@ -208,7 +313,6 @@ main #skills .slide figure:hover {
 
 main #portfolio {
     background-color: #f29f05;
-    transform: translateY(-300px);
 }
 
 main #portfolio h2,
@@ -275,7 +379,6 @@ main #portfolio .slider .port-dubs img {
 
 main #contactme {
     background-color: #f23030;
-    transform: translateY(-300px);
 }
 
 main #contactme h2,
@@ -338,7 +441,7 @@ main #contactme #contato textarea {
     height: 300px;
 }
 
-#contactme #contato input[type="button"] {
+#contactme #contato button {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 18px;
     font-weight: 500;
@@ -347,6 +450,7 @@ main #contactme #contato textarea {
     border: 1px #f29f05 solid;
     border-radius: 10px;
     padding: 10px;
+    margin-bottom: 20px;
     width: 500px;
     cursor: pointer;
     transition: 0.3s;
@@ -357,15 +461,156 @@ main #contactme #contato textarea {
     background-color: #f29f05;
 }
 
-footer {
-    transform: translateY(-300px);
+footer p {
+    color: #ccc;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 15px 0;
+    text-align: center;
+}
+
+footer #container {
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+footer #container h2 {
+    color: #f2f2f2;
+    padding-bottom: 15px;
+}
+
+footer #container li {
+    list-style: none;
+}
+
+footer #container li a {
+    color: #ccc;
+    font-family: 'Roboto Condensed', sans-serif;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+footer #container li a:hover {
+    color: #413f3f;
+}
+
+footer #container #menu-footer {
+    padding-right: 350px;
 }
 
 @media screen and (max-width: 450px) {
-    .header-desktop {
+
+    header {
+        height: 50px;
+    }
+
+    header .header-desktop {
         display: none;
     }
-    .header-mobile {
+
+    header .header-mobile {
+        display: flex;
+    }
+
+    main #aboutme {
         display: block;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    main #aboutme .branding {
+        background-image: url(images/branding.png);
+        background-size: cover;
+        border: 5px #f23030 dashed;
+        border-radius: 50%;
+        height: 240px;
+        width: 240px;
+        margin: 20px 100px;
+        transform: translateY(0px) translateX(-20px);
+    }
+
+    main #aboutme .hello {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    main #aboutme .hello p {
+        max-width: 300px;
+        text-align: justify;
+        margin-left: 50px;
+        padding-bottom: 20px;
+    }
+
+    main #skills {
+        display: flex;
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    main #skills h2,
+    main #skills p {
+        text-align: center;
+        padding: 0;
+        transform: translateX(0px);
+    }
+
+    main #skills p {
+        padding: 10px;
+    }
+    
+    main #skills .slide {
+        display: block;
+        text-align: center;
+        justify-content: center;
+    }
+
+    main #skills .slide figure {
+        display: inline-block;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    main #skills .slide figure img {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 90px;
+    }
+
+    main #skills .slide figure:hover {
+        transform: none;
+    }
+
+    main #skills .slide figure p {
+        text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        color: #ccc;
+        padding-top: 10px;
+        transform: none;
+    }
+
+    main #contactme #contato input,
+    main #contactme #contato textarea,
+    main #contactme #contato button {
+        width: 350px;
+    }
+    
+    footer #container #menu-footer {
+        padding-left: 15px;
+        padding-right: 100px;
+    }
+
+    footer #container #social-footer {
+        padding-right: 15px;
+    }
+
+    footer #container #social-footer nav {
+        text-align: right;
+    }
+
+    footer p {
+        padding: 25px 0;
     }
 }
