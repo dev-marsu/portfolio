@@ -6,8 +6,8 @@
 ## Screenshots das versões Mobile e Desktop
 
 ### Índice
-    - [Mobile](#mobile)
-    - [Desktop](#desktop)
+- [Mobile](#mobile)
+- [Desktop](#desktop)
 
 ## *Mobile
 
