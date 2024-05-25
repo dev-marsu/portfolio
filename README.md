@@ -2,6 +2,7 @@
 
 *Minha Landing Page onde mostro projetos que fiz para portfólio.* <br>
 *Futuramente publicarei artigos neste site, adicionando a aba "<Artigos>".*
+*A aba Contato não funcionará por se tratar de um site hospedado no Github Pages.*
 
 ## Screenshots das versões Mobile e Desktop
 
